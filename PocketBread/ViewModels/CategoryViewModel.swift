@@ -8,7 +8,6 @@
 import Foundation
 
 struct CategoryViewModel {
-
     var categories: [Category]
 
     init(categories: [Category]) {
@@ -18,5 +17,4 @@ struct CategoryViewModel {
     init() {
         self.init(categories: [])
     }
-
 }

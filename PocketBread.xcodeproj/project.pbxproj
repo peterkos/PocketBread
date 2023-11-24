@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D7801C102B115128006BF2E8 /* PocketBreadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7801C0F2B115128006BF2E8 /* PocketBreadApp.swift */; };
-		D7801C122B115128006BF2E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7801C112B115128006BF2E8 /* ContentView.swift */; };
+		D7801C122B115128006BF2E8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7801C112B115128006BF2E8 /* RootView.swift */; };
 		D7801C142B11512A006BF2E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7801C132B11512A006BF2E8 /* Assets.xcassets */; };
 		D7801C172B11512A006BF2E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7801C162B11512A006BF2E8 /* Preview Assets.xcassets */; };
 		D7801C222B11512A006BF2E8 /* PocketBreadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7801C212B11512A006BF2E8 /* PocketBreadTests.swift */; };
@@ -20,6 +20,7 @@
 		D7801C442B11535A006BF2E8 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7801C432B11535A006BF2E8 /* RootViewModel.swift */; };
 		D7801C482B115374006BF2E8 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7801C472B115374006BF2E8 /* CategoryViewModel.swift */; };
 		D7801C4A2B1153AC006BF2E8 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7801C492B1153AC006BF2E8 /* TransactionViewModel.swift */; };
+		D7FFAACF2B1156B7008C36B8 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFAACE2B1156B7008C36B8 /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,7 @@
 /* Begin PBXFileReference section */
 		D7801C0C2B115128006BF2E8 /* PocketBread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketBread.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7801C0F2B115128006BF2E8 /* PocketBreadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketBreadApp.swift; sourceTree = "<group>"; };
-		D7801C112B115128006BF2E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D7801C112B115128006BF2E8 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D7801C132B11512A006BF2E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7801C162B11512A006BF2E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D7801C182B11512A006BF2E8 /* PocketBread.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PocketBread.entitlements; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		D7801C432B11535A006BF2E8 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		D7801C472B115374006BF2E8 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		D7801C492B1153AC006BF2E8 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		D7FFAACE2B1156B7008C36B8 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +148,8 @@
 		D7801C3A2B1151B6006BF2E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D7801C112B115128006BF2E8 /* ContentView.swift */,
+				D7801C112B115128006BF2E8 /* RootView.swift */,
+				D7FFAACE2B1156B7008C36B8 /* CategoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,13 +305,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7801C482B115374006BF2E8 /* CategoryViewModel.swift in Sources */,
-				D7801C122B115128006BF2E8 /* ContentView.swift in Sources */,
+				D7801C122B115128006BF2E8 /* RootView.swift in Sources */,
 				D7801C102B115128006BF2E8 /* PocketBreadApp.swift in Sources */,
 				D7801C422B115332006BF2E8 /* Vendor.swift in Sources */,
 				D7801C402B115253006BF2E8 /* Transaction.swift in Sources */,
 				D7801C442B11535A006BF2E8 /* RootViewModel.swift in Sources */,
 				D7801C3E2B115202006BF2E8 /* Category.swift in Sources */,
 				D7801C4A2B1153AC006BF2E8 /* TransactionViewModel.swift in Sources */,
+				D7FFAACF2B1156B7008C36B8 /* CategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import SwiftUI
 struct PocketBreadApp: App {
     var body: some Scene {
         WindowGroup {
-            RootView()
+            RootView(viewModel: RootViewModel())
         }
     }
 }

@@ -8,5 +8,13 @@
 import Foundation
 
 struct TransactionViewModel {
-    
+    var transactions: [Transaction]
+
+    init(transactions: [Transaction]) {
+        self.transactions = transactions
+    }
+
+    init() {
+        self.init(transactions: [])
+    }
 }

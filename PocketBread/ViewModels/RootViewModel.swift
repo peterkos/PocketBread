@@ -8,13 +8,6 @@
 import Foundation
 
 struct RootViewModel {
-
-    // list categories
-    // transactions
-
     var categoryViewModel = CategoryViewModel()
     var transactionViewModel = TransactionViewModel()
-
-
-
 }
