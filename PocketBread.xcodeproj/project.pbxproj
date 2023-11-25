@@ -47,6 +47,7 @@
 		D71AE0552B11C7C100A1DF5B /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		D71AE0572B11C93A00A1DF5B /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		D71AE0592B11CB1500A1DF5B /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
+		D71AE05B2B11D46B00A1DF5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D7801C0C2B115128006BF2E8 /* PocketBread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketBread.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7801C0F2B115128006BF2E8 /* PocketBreadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketBreadApp.swift; sourceTree = "<group>"; };
 		D7801C112B115128006BF2E8 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 		D7801C0E2B115128006BF2E8 /* PocketBread */ = {
 			isa = PBXGroup;
 			children = (
+				D71AE05B2B11D46B00A1DF5B /* Info.plist */,
 				D7801C3C2B1151C3006BF2E8 /* Domain */,
 				D7801C3B2B1151BE006BF2E8 /* ViewModels */,
 				D7801C3A2B1151B6006BF2E8 /* Views */,
@@ -495,7 +497,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PocketBread/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -525,7 +529,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PocketBread/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

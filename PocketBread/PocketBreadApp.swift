@@ -11,7 +11,9 @@ import SwiftUI
 struct PocketBreadApp: App {
     var body: some Scene {
         WindowGroup {
-            RootView(viewModel: RootViewModel())
+            NavigationStack {
+                RootView(viewModel: .makeWithDefaultStuff())
+            }
         }
     }
 }
