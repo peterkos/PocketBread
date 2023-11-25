@@ -5,11 +5,10 @@
 //  Created by Peter Kos on 11/25/23.
 //
 
-import Foundation
 import Charts
+import Foundation
 
 struct Amount: Equatable, Comparable, Plottable, CustomStringConvertible {
-
     var amount: Double
     var description: String {
         return String(amount)
@@ -20,15 +19,18 @@ struct Amount: Equatable, Comparable, Plottable, CustomStringConvertible {
     init(_ amount: Double) {
         self.amount = amount
     }
+
     init(_ amount: Int) {
         self.amount = Double(amount)
     }
 
     // MARK: Math
-    static func -(lhs: Amount, rhs: Amount) -> Amount {
+
+    static func - (lhs: Amount, rhs: Amount) -> Amount {
         return Amount(lhs.amount - rhs.amount)
     }
-    static func +(lhs: Amount, rhs: Amount) -> Amount {
+
+    static func + (lhs: Amount, rhs: Amount) -> Amount {
         return Amount(lhs.amount - rhs.amount)
     }
 
@@ -46,6 +48,7 @@ struct Amount: Equatable, Comparable, Plottable, CustomStringConvertible {
     }
 
     // MARK: - Comparable
+
     static func < (lhs: Amount, rhs: Amount) -> Bool {
         return lhs.amount < rhs.amount
     }
@@ -53,11 +56,13 @@ struct Amount: Equatable, Comparable, Plottable, CustomStringConvertible {
     static func < (lhs: Amount, rhs: Double) -> Bool {
         return lhs.amount < rhs
     }
+
     static func > (lhs: Amount, rhs: Double) -> Bool {
         return lhs.amount > rhs
     }
 
     // MARK: - Plottable
+
     var primitivePlottable: Double {
         amount
     }
@@ -68,4 +73,3 @@ struct Amount: Equatable, Comparable, Plottable, CustomStringConvertible {
 
     typealias PrimitivePlottable = Double
 }
-

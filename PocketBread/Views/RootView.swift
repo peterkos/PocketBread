@@ -21,8 +21,6 @@ struct RootView: View {
                     Text("Categories")
                         .font(.headline)
                 })
-            }
-            List {
                 Section(content: {
                     ForEach(viewModel.transactionViewModel.transactions) { transaction in
                         TransactionView(transaction: transaction)
@@ -40,11 +38,6 @@ struct RootView: View {
 
 #Preview {
     NavigationStack {
-        RootView(viewModel: RootViewModel(
-            categoryViewModel: CategoryViewModel(categories: [
-                .makeWithHalfSpent(),
-                .makeWithHalfSpent(),
-            ]))
-        )
+        RootView(viewModel: .makeWithDefaultStuff())
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 struct Transaction: Identifiable {
     var id: UUID
     var name: String
+    var date: Date
     var amount: Amount
     var category: Category
     var vendor: Vendor
@@ -26,6 +27,7 @@ extension Transaction {
         return Transaction(
             id: .init(),
             name: "Burger",
+            date: Date.now,
             amount: Amount(12.00),
             category: category,
             vendor: Vendor(id: .init(), name: "McRicky's"),
