@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct Category {
+struct Category: Identifiable {
+    var id: UUID = UUID() // TODO: this might not be stable?
     var name: String
-    var targetAmount: Int
-    var actualAmount: Int
+    var targetAmount: Double
+    var actualAmount: Double
 }
 
 extension Category {

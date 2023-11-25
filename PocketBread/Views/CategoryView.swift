@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 struct CategoryView: View {
     var category: Category
@@ -15,12 +16,34 @@ struct CategoryView: View {
             Text(category.name)
                 .bold()
             HStack {
-                Text("\(category.actualAmount)")
+                Text("target: \(category.targetAmount)")
+                Text("actual: \(category.actualAmount)")
                 Spacer()
-                Text("\(category.targetAmount)")
             }
+            progressBar
+                .frame(height: 20)
+                .clipShape(RoundedRectangle(cornerRadius: 5))
         }
     }
+
+    private var progressBar: some View {
+        Chart([category]) {
+            BarMark(
+                x: .value("target amount", $0.actualAmount)
+            )
+            .foregroundStyle(.blue)
+            
+            BarMark(
+                x: .value("target amount", $0.targetAmount)
+            )
+            .foregroundStyle(.blue.opacity(20))
+        }
+        .chartXScale(domain: 0...category.targetAmount)
+        .chartLegend(.hidden)
+        .chartXAxis(.hidden)
+    }
+
+
 }
 
 #Preview {
