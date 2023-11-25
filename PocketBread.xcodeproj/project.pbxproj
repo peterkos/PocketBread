@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D71AE0562B11C7C100A1DF5B /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71AE0552B11C7C100A1DF5B /* ProgressBarView.swift */; };
+		D71AE0582B11C93A00A1DF5B /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71AE0572B11C93A00A1DF5B /* TransactionView.swift */; };
+		D71AE05A2B11CB1500A1DF5B /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71AE0592B11CB1500A1DF5B /* Amount.swift */; };
 		D7801C102B115128006BF2E8 /* PocketBreadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7801C0F2B115128006BF2E8 /* PocketBreadApp.swift */; };
 		D7801C122B115128006BF2E8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7801C112B115128006BF2E8 /* RootView.swift */; };
 		D7801C142B11512A006BF2E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7801C132B11512A006BF2E8 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		D71AE0552B11C7C100A1DF5B /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		D71AE0572B11C93A00A1DF5B /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		D71AE0592B11CB1500A1DF5B /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		D7801C0C2B115128006BF2E8 /* PocketBread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketBread.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7801C0F2B115128006BF2E8 /* PocketBreadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketBreadApp.swift; sourceTree = "<group>"; };
 		D7801C112B115128006BF2E8 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 				D7801C112B115128006BF2E8 /* RootView.swift */,
 				D7FFAACE2B1156B7008C36B8 /* CategoryView.swift */,
 				D71AE0552B11C7C100A1DF5B /* ProgressBarView.swift */,
+				D71AE0572B11C93A00A1DF5B /* TransactionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				D7801C3D2B115202006BF2E8 /* Category.swift */,
 				D7801C3F2B115253006BF2E8 /* Transaction.swift */,
 				D7801C412B115332006BF2E8 /* Vendor.swift */,
+				D71AE0592B11CB1500A1DF5B /* Amount.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -312,11 +318,13 @@
 				D7801C102B115128006BF2E8 /* PocketBreadApp.swift in Sources */,
 				D7801C422B115332006BF2E8 /* Vendor.swift in Sources */,
 				D7801C402B115253006BF2E8 /* Transaction.swift in Sources */,
+				D71AE0582B11C93A00A1DF5B /* TransactionView.swift in Sources */,
 				D7801C442B11535A006BF2E8 /* RootViewModel.swift in Sources */,
 				D7801C3E2B115202006BF2E8 /* Category.swift in Sources */,
 				D7801C4A2B1153AC006BF2E8 /* TransactionViewModel.swift in Sources */,
 				D7FFAACF2B1156B7008C36B8 /* CategoryView.swift in Sources */,
 				D71AE0562B11C7C100A1DF5B /* ProgressBarView.swift in Sources */,
+				D71AE05A2B11CB1500A1DF5B /* Amount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

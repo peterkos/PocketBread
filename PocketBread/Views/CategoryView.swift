@@ -15,8 +15,6 @@ struct CategoryView: View {
         VStack(alignment: .leading) {
             Text(category.name)
                 .bold()
-            //            Text("target: \(category.targetAmountFormatted)")
-            //            Text("actual: \(category.actualAmountFormatted)")
             ProgressBar(category: category)
                 .frame(height: 40)
         }

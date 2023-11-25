@@ -12,21 +12,39 @@ struct RootView: View {
 
     var body: some View {
         VStack {
-            Text("Root View")
-
-            // list of categories
-            // progress bar of each category
             List {
                 Section(content: {
+                    ForEach(viewModel.categoryViewModel.categories) { category in
+                        CategoryView(category: category)
+                    }
                 }, header: {
                     Text("Categories")
                         .font(.headline)
                 })
             }
+            List {
+                Section(content: {
+                    ForEach(viewModel.transactionViewModel.transactions) { transaction in
+                        TransactionView(transaction: transaction)
+                    }
+                }, header: {
+                    Text("Recent Transactions")
+                        .font(.headline)
+                })
+            }
         }
+        .navigationTitle("PocketBread")
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 
 #Preview {
-    RootView(viewModel: RootViewModel())
+    NavigationStack {
+        RootView(viewModel: RootViewModel(
+            categoryViewModel: CategoryViewModel(categories: [
+                .makeWithHalfSpent(),
+                .makeWithHalfSpent(),
+            ]))
+        )
+    }
 }

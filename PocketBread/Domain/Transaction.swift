@@ -10,8 +10,26 @@ import Foundation
 struct Transaction: Identifiable {
     var id: UUID
     var name: String
-    var amount: Int
+    var amount: Amount
     var category: Category
     var vendor: Vendor
     var note: String
+}
+
+extension Transaction {
+    static func makeBurgerFood() -> Transaction {
+        let category = Category(
+            name: "Food",
+            targetAmount: Amount(0),
+            actualAmount: Amount(0)
+        )
+        return Transaction(
+            id: .init(),
+            name: "Burger",
+            amount: Amount(12.00),
+            category: category,
+            vendor: Vendor(id: .init(), name: "McRicky's"),
+            note: "Yummy!"
+        )
+    }
 }

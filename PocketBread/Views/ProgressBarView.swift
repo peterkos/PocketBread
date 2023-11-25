@@ -25,7 +25,7 @@ struct ProgressBar: View {
             }
 
             let diff = $0.targetAmount - $0.actualAmount
-            if diff > 0 {
+            if diff > 0.0 {
                 BarMark(x: .value("target amount remaining", diff))
                     .foregroundStyle(.blue.opacity(20))
             }
@@ -34,16 +34,16 @@ struct ProgressBar: View {
         .chartPlotStyle(content: { content in
             content.clipShape(RoundedRectangle(cornerRadius: 10))
         })
-        .chartXScale(domain: 0 ... category.targetAmount)
+        .chartXScale(domain: Amount(0) ... category.targetAmount)
         .chartLegend(.hidden)
         .chartXAxis {
-            let interestPoints: [Double] = [0.0, category.actualAmount, category.targetAmount]
+            let interestPoints = [Amount(0), category.actualAmount, category.targetAmount]
             AxisMarks(values: interestPoints) { value in
-                if let num = value.as(Double.self) {
+                if let num = value.as(Amount.self) {
                     AxisValueLabel(multiLabelAlignment: .leading) {
                         switch num {
-                        case category.actualAmount: Text(category.actualAmountFormatted)
-                        case category.targetAmount: Text(category.targetAmountFormatted)
+                        case category.actualAmount: Text(num.formatted)
+                        case category.targetAmount: Text(num.formatted)
                         default: Text("")
                         }
                     }
