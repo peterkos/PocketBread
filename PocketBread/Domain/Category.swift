@@ -8,10 +8,25 @@
 import Foundation
 
 struct Category: Identifiable {
-    var id: UUID = UUID() // TODO: this might not be stable?
+    var id: UUID = .init() // TODO: this might not be stable?
     var name: String
     var targetAmount: Double
     var actualAmount: Double
+
+    var targetAmountFormatted: String {
+        formatter.string(from: NSNumber(value: targetAmount)) ?? "0.00"
+    }
+
+    var actualAmountFormatted: String {
+        formatter.string(from: NSNumber(value: actualAmount)) ?? "0.00"
+    }
+
+    private var formatter: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 2
+        formatter.numberStyle = .currency
+        return formatter
+    }
 }
 
 extension Category {
