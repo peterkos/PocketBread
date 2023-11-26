@@ -56,16 +56,14 @@ struct TransactionDetailView: View {
     @ViewBuilder
     private func detailRow<Content: View>(
         label: String,
-        content: @escaping () -> Content) -> some View
-    {
+        content: @escaping () -> Content
+    ) -> some View {
         HStack {
             Text(label)
             Spacer()
             content()
         }
     }
-
-
 }
 
 #Preview {
