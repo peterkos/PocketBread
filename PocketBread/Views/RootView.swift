@@ -17,7 +17,8 @@ struct RootView: View {
     var body: some View {
         VStack {
             List {
-                categorySection
+                CategoryListView(viewModel: $viewModel.categoryViewModel)
+                // TODO: its own list view probably, or something else idk
                 transactionSection
             }
         }
@@ -26,19 +27,6 @@ struct RootView: View {
         .onAppear {
             viewModel.load()
         }
-    }
-
-    private var categorySection: some View {
-        Section(content: {
-            ForEach(viewModel.categoryViewModel.categories) { category in
-                CategoryView(category: category)
-            }
-        }, header: {
-            HStack {
-                Text("Categories")
-                    .font(.headline)
-            }
-        })
     }
 
     private var transactionSection: some View {
