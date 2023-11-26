@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct RootView: View {
-    var viewModel: RootViewModel
+    
+    @StateObject var viewModel: RootViewModel
+
+    init(viewModel: RootViewModel) {
+        _viewModel = .init(wrappedValue: viewModel)
+    }
 
     var body: some View {
         VStack {
@@ -33,11 +38,8 @@ struct RootView: View {
         }
         .navigationTitle("PocketBread")
         .navigationBarTitleDisplayMode(.large)
-    }
-}
-
-#Preview {
-    NavigationStack {
-        RootView(viewModel: .makeWithDefaultStuff())
+        .onAppear {
+            viewModel.load()
+        }
     }
 }

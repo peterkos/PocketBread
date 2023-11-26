@@ -23,9 +23,9 @@ struct CategoryView: View {
 
 #Preview {
     List {
-        CategoryView(category: .makeWithNoAmount())
-        CategoryView(category: .makeWithHalfSpent())
-        CategoryView(category: .makeWithFullBudget())
-        CategoryView(category: .makeWithOverspent())
+        let oneOfEach = MockService().getCategories(.oneOfEachCategory)
+        ForEach(oneOfEach) { category in
+            CategoryView(category: category)
+        }
     }
 }

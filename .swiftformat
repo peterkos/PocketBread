@@ -1,1 +1,3 @@
 --emptybraces linebreak
+--wrapcollections before-first
+--wraparguments before-first

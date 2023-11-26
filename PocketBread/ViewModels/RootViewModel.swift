@@ -6,28 +6,24 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct RootViewModel {
-    var categoryViewModel = CategoryViewModel()
-    var transactionViewModel = TransactionViewModel()
-}
+class RootViewModel: ObservableObject {
 
-extension RootViewModel {
-    static func makeWithDefaultStuff() -> RootViewModel {
-        let categories: [Category] = [
-            .makeWithHalfSpent(),
-            .makeWithFullBudget(),
-            .makeWithNoAmount()
-        ]
-        let transactions: [Transaction] = [
-            .makeBurgerFood(),
-            .makeBurgerFood(),
-            .makeBurgerFood(),
-            .makeBurgerFood(),
-        ]
-        return RootViewModel(
-            categoryViewModel: .init(categories: categories),
-            transactionViewModel: .init(transactions: transactions)
-        )
+    @Published var categoryViewModel = CategoryViewModel()
+    @Published var transactionViewModel = TransactionViewModel()
+
+    var service: any BreadService
+
+    init(service: any BreadService) {
+        self.service = service
+    }
+
+    func load() {
+        // Mocking!
+        if let service = service as? MockService {
+            categoryViewModel.categories = service.getCategories(.basicBudget)
+            transactionViewModel.transactions = service.getTransactions(.basicBudget)
+        }
     }
 }

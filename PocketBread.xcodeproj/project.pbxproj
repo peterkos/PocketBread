@@ -23,6 +23,10 @@
 		D7801C442B11535A006BF2E8 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7801C432B11535A006BF2E8 /* RootViewModel.swift */; };
 		D7801C482B115374006BF2E8 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7801C472B115374006BF2E8 /* CategoryViewModel.swift */; };
 		D7801C4A2B1153AC006BF2E8 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7801C492B1153AC006BF2E8 /* TransactionViewModel.swift */; };
+		D7CFE85D2B12F4C300C1E370 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE85C2B12F4C300C1E370 /* MockService.swift */; };
+		D7CFE85F2B12F4E400C1E370 /* BreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE85E2B12F4E400C1E370 /* BreadService.swift */; };
+		D7CFE8622B1308CD00C1E370 /* BasicBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE8612B1308CD00C1E370 /* BasicBudget.swift */; };
+		D7CFE8642B1308D900C1E370 /* OneOfEachCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE8632B1308D900C1E370 /* OneOfEachCategory.swift */; };
 		D7FFAACF2B1156B7008C36B8 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFAACE2B1156B7008C36B8 /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +69,10 @@
 		D7801C432B11535A006BF2E8 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		D7801C472B115374006BF2E8 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		D7801C492B1153AC006BF2E8 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		D7CFE85C2B12F4C300C1E370 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		D7CFE85E2B12F4E400C1E370 /* BreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadService.swift; sourceTree = "<group>"; };
+		D7CFE8612B1308CD00C1E370 /* BasicBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicBudget.swift; sourceTree = "<group>"; };
+		D7CFE8632B1308D900C1E370 /* OneOfEachCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneOfEachCategory.swift; sourceTree = "<group>"; };
 		D7FFAACE2B1156B7008C36B8 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +124,7 @@
 		D7801C0E2B115128006BF2E8 /* PocketBread */ = {
 			isa = PBXGroup;
 			children = (
+				D7CFE85B2B12F4A600C1E370 /* Service */,
 				D71AE05B2B11D46B00A1DF5B /* Info.plist */,
 				D7801C3C2B1151C3006BF2E8 /* Domain */,
 				D7801C3B2B1151BE006BF2E8 /* ViewModels */,
@@ -183,6 +192,25 @@
 				D71AE0592B11CB1500A1DF5B /* Amount.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		D7CFE85B2B12F4A600C1E370 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D7CFE8602B1308B200C1E370 /* BudgetType */,
+				D7CFE85C2B12F4C300C1E370 /* MockService.swift */,
+				D7CFE85E2B12F4E400C1E370 /* BreadService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D7CFE8602B1308B200C1E370 /* BudgetType */ = {
+			isa = PBXGroup;
+			children = (
+				D7CFE8612B1308CD00C1E370 /* BasicBudget.swift */,
+				D7CFE8632B1308D900C1E370 /* OneOfEachCategory.swift */,
+			);
+			path = BudgetType;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,12 +349,16 @@
 				D7801C422B115332006BF2E8 /* Vendor.swift in Sources */,
 				D7801C402B115253006BF2E8 /* Transaction.swift in Sources */,
 				D71AE0582B11C93A00A1DF5B /* TransactionView.swift in Sources */,
+				D7CFE85F2B12F4E400C1E370 /* BreadService.swift in Sources */,
 				D7801C442B11535A006BF2E8 /* RootViewModel.swift in Sources */,
+				D7CFE8642B1308D900C1E370 /* OneOfEachCategory.swift in Sources */,
+				D7CFE85D2B12F4C300C1E370 /* MockService.swift in Sources */,
 				D7801C3E2B115202006BF2E8 /* Category.swift in Sources */,
 				D7801C4A2B1153AC006BF2E8 /* TransactionViewModel.swift in Sources */,
 				D7FFAACF2B1156B7008C36B8 /* CategoryView.swift in Sources */,
 				D71AE0562B11C7C100A1DF5B /* ProgressBarView.swift in Sources */,
 				D71AE05A2B11CB1500A1DF5B /* Amount.swift in Sources */,
+				D7CFE8622B1308CD00C1E370 /* BasicBudget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

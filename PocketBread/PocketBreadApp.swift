@@ -12,7 +12,7 @@ struct PocketBreadApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                RootView(viewModel: .makeWithDefaultStuff())
+                RootView(viewModel: RootViewModel(service: MockService()))
             }
         }
     }

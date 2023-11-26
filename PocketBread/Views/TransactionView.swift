@@ -22,13 +22,16 @@ struct TransactionView: View {
             Spacer()
             VStack(alignment: .leading) {
                 Text(transaction.amount.formatted)
-                categoryLabel
+                if let category = transaction.category {
+                    categoryLabel(category)
+                }
             }
         }
     }
 
-    private var categoryLabel: some View {
-        Text(transaction.category.name)
+    @ViewBuilder
+    private func categoryLabel(_ category: Category) -> some View {
+        Text(category.name)
             .padding(.horizontal, 6)
             .padding(.bottom, 2) // grr, line height
             .font(.body.smallCaps())
@@ -37,15 +40,5 @@ struct TransactionView: View {
                 RoundedRectangle(cornerRadius: .infinity)
                     .fill(.blue)
             )
-    }
-}
-
-#Preview {
-    List {
-        TransactionView(transaction: .makeBurgerFood())
-        TransactionView(transaction: .makeBurgerFood())
-        TransactionView(transaction: .makeBurgerFood())
-        TransactionView(transaction: .makeBurgerFood())
-        TransactionView(transaction: .makeBurgerFood())
     }
 }
