@@ -23,7 +23,7 @@ struct CategoryView: View {
 
 #Preview {
     List {
-        let oneOfEach = MockService().getCategories(.oneOfEachCategory)
+        let oneOfEach = MockService(.basicBudget).getCategories()
         ForEach(oneOfEach) { category in
             CategoryView(category: category)
         }

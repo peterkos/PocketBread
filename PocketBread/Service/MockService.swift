@@ -13,33 +13,35 @@ struct MockService: BreadService {
         case oneOfEachCategory
     }
 
-    // MARK: BreadService
+    let budgetType: BudgetType
 
-    /// By default, use BasicBudget
-    func getCategories() -> [Category] {
-        return BasicBudget.categories
-    }
-
-    /// By default, use BasicBudget
-    func getTransactions() -> [Transaction] {
-        return BasicBudget.transactions
-    }
-
-    // MARK: Convienence
-
-    // TODO: Cleanup
-
-    func getCategories(_ budgetType: BudgetType) -> [Category] {
+    private var categories: [Category] {
         switch budgetType {
         case .basicBudget: BasicBudget.categories
         case .oneOfEachCategory: OneOfEachCategory.categories
         }
     }
 
-    func getTransactions(_ budgetType: BudgetType) -> [Transaction] {
+    private var transactions: [Transaction] {
         switch budgetType {
         case .basicBudget: BasicBudget.transactions
         case .oneOfEachCategory: OneOfEachCategory.transactions
         }
+    }
+
+    
+    init(_ budgetType: BudgetType) {
+        self.budgetType = budgetType
+    }
+
+
+    // MARK: BreadService
+
+    func getCategories() -> [Category] {
+        return categories
+    }
+
+    func getTransactions() -> [Transaction] {
+        return transactions
     }
 }

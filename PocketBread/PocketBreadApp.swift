@@ -12,7 +12,8 @@ struct PocketBreadApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                RootView(viewModel: RootViewModel(service: MockService()))
+                let mockService = MockService(.basicBudget)
+                RootView(viewModel: RootViewModel(service: mockService))
             }
         }
     }

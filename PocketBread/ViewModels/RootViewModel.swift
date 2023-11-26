@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 class RootViewModel: ObservableObject {
-
     @Published var categoryViewModel = CategoryViewModel()
     @Published var transactionViewModel = TransactionViewModel()
 
@@ -20,10 +19,7 @@ class RootViewModel: ObservableObject {
     }
 
     func load() {
-        // Mocking!
-        if let service = service as? MockService {
-            categoryViewModel.categories = service.getCategories(.basicBudget)
-            transactionViewModel.transactions = service.getTransactions(.basicBudget)
-        }
+        categoryViewModel.categories = service.getCategories()
+        transactionViewModel.transactions = service.getTransactions()
     }
 }
