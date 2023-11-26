@@ -15,11 +15,13 @@ struct RootView: View {
     }
 
     var body: some View {
-        VStack {
-            List {
-                CategoryListView(viewModel: $viewModel.categoryViewModel)
-                // TODO: its own list view probably, or something else idk
-                transactionSection
+        NavigationStack {
+            VStack {
+                List {
+                    CategoryListView(viewModel: $viewModel.categoryViewModel)
+                    // TODO: its own list view probably, or something else idk
+                    transactionSection
+                }
             }
         }
         .navigationTitle("PocketBread")

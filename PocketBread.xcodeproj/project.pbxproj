@@ -28,6 +28,7 @@
 		D7CFE8622B1308CD00C1E370 /* BasicBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE8612B1308CD00C1E370 /* BasicBudget.swift */; };
 		D7CFE8642B1308D900C1E370 /* OneOfEachCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE8632B1308D900C1E370 /* OneOfEachCategory.swift */; };
 		D7CFE8682B1311C200C1E370 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE8672B1311C200C1E370 /* CategoryListView.swift */; };
+		D7CFE86B2B1313DD00C1E370 /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE86A2B1313DD00C1E370 /* CategoryDetailView.swift */; };
 		D7FFAACF2B1156B7008C36B8 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFAACE2B1156B7008C36B8 /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		D7CFE8612B1308CD00C1E370 /* BasicBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicBudget.swift; sourceTree = "<group>"; };
 		D7CFE8632B1308D900C1E370 /* OneOfEachCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneOfEachCategory.swift; sourceTree = "<group>"; };
 		D7CFE8672B1311C200C1E370 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
+		D7CFE86A2B1313DD00C1E370 /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
 		D7FFAACE2B1156B7008C36B8 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,10 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				D7801C112B115128006BF2E8 /* RootView.swift */,
-				D7FFAACE2B1156B7008C36B8 /* CategoryView.swift */,
+				D7CFE8692B1313CA00C1E370 /* Categories */,
 				D71AE0552B11C7C100A1DF5B /* ProgressBarView.swift */,
 				D71AE0572B11C93A00A1DF5B /* TransactionView.swift */,
-				D7CFE8672B1311C200C1E370 /* CategoryListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +215,16 @@
 				D7CFE8632B1308D900C1E370 /* OneOfEachCategory.swift */,
 			);
 			path = BudgetType;
+			sourceTree = "<group>";
+		};
+		D7CFE8692B1313CA00C1E370 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D7CFE8672B1311C200C1E370 /* CategoryListView.swift */,
+				D7FFAACE2B1156B7008C36B8 /* CategoryView.swift */,
+				D7CFE86A2B1313DD00C1E370 /* CategoryDetailView.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +362,7 @@
 				D7801C102B115128006BF2E8 /* PocketBreadApp.swift in Sources */,
 				D7801C422B115332006BF2E8 /* Vendor.swift in Sources */,
 				D7801C402B115253006BF2E8 /* Transaction.swift in Sources */,
+				D7CFE86B2B1313DD00C1E370 /* CategoryDetailView.swift in Sources */,
 				D71AE0582B11C93A00A1DF5B /* TransactionView.swift in Sources */,
 				D7CFE8682B1311C200C1E370 /* CategoryListView.swift in Sources */,
 				D7CFE85F2B12F4E400C1E370 /* BreadService.swift in Sources */,

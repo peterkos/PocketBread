@@ -29,11 +29,9 @@ struct MockService: BreadService {
         }
     }
 
-    
     init(_ budgetType: BudgetType) {
         self.budgetType = budgetType
     }
-
 
     // MARK: BreadService
 

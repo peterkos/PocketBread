@@ -8,13 +8,17 @@
 import Charts
 import SwiftUI
 
+/// View of an individual, collapsed category (i.e., on category list)
 struct CategoryView: View {
     var category: Category
+    var showName = true
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text(category.name)
-                .bold()
+            if showName {
+                Text(category.name)
+                    .bold()
+            }
             ProgressBar(category: category)
                 .frame(height: 40)
         }

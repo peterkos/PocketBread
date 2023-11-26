@@ -1,5 +1,5 @@
 //
-//  CategoryListview.swift
+//  CategoryListView.swift
 //  PocketBread
 //
 //  Created by Peter Kos on 11/26/23.
@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct CategoryListView: View {
-
     @Binding var viewModel: CategoryViewModel
     @State var isConfigSheetDisplayed = false
 
     var body: some View {
         Section(content: {
             ForEach(viewModel.categories) { category in
-                CategoryView(category: category)
+                NavigationLink(
+                    destination: CategoryDetailView(category: category),
+                    label: {
+                        CategoryView(category: category)
+                    }
+                )
             }
         }, header: {
             HStack {
@@ -39,19 +43,18 @@ struct CategoryListView: View {
 }
 
 struct CategoryConfigSheet: View {
-
     var body: some View {
         Text("hi!")
     }
 }
 
-
-
 #Preview {
     let service = MockService(.oneOfEachCategory)
     let viewModel: Binding<CategoryViewModel> = .constant(.init(categories: service.getCategories()))
 
-    return List {
-        CategoryListView(viewModel: viewModel)
+    return NavigationStack {
+        List {
+            CategoryListView(viewModel: viewModel)
+        }
     }
 }
