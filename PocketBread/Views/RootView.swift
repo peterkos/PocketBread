@@ -18,9 +18,12 @@ struct RootView: View {
         NavigationStack {
             VStack {
                 List {
-                    CategoryListView(viewModel: $viewModel.categoryViewModel)
-                    // TODO: its own list view probably, or something else idk
-                    transactionSection
+                    CategoryListView(
+                        viewModel: $viewModel.categoryViewModel
+                    )
+                    TransactionListView(
+                        viewModel: $viewModel.transactionViewModel
+                    )
                 }
             }
         }
@@ -29,17 +32,6 @@ struct RootView: View {
         .onAppear {
             viewModel.load()
         }
-    }
-
-    private var transactionSection: some View {
-        Section(content: {
-            ForEach(viewModel.transactionViewModel.transactions) { transaction in
-                TransactionView(transaction: transaction)
-            }
-        }, header: {
-            Text("Recent Transactions")
-                .font(.headline)
-        })
     }
 }
 

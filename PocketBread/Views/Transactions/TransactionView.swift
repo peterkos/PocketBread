@@ -20,25 +20,13 @@ struct TransactionView: View {
                 Text(transaction.date.formatted())
             }
             Spacer()
-            VStack(alignment: .leading) {
+            VStack(alignment: .trailing) {
                 Text(transaction.amount.formatted)
                 if let category = transaction.category {
-                    categoryLabel(category)
+                    // TODO: Category colors
+                    ColorPill(value: category.name)
                 }
             }
         }
-    }
-
-    @ViewBuilder
-    private func categoryLabel(_ category: Category) -> some View {
-        Text(category.name)
-            .padding(.horizontal, 6)
-            .padding(.bottom, 2) // grr, line height
-            .font(.body.smallCaps())
-            .foregroundStyle(.white)
-            .background(
-                RoundedRectangle(cornerRadius: .infinity)
-                    .fill(.blue)
-            )
     }
 }

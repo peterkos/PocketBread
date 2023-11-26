@@ -29,6 +29,9 @@
 		D7CFE8642B1308D900C1E370 /* OneOfEachCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE8632B1308D900C1E370 /* OneOfEachCategory.swift */; };
 		D7CFE8682B1311C200C1E370 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE8672B1311C200C1E370 /* CategoryListView.swift */; };
 		D7CFE86B2B1313DD00C1E370 /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE86A2B1313DD00C1E370 /* CategoryDetailView.swift */; };
+		D7CFE86E2B13164900C1E370 /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE86D2B13164900C1E370 /* TransactionListView.swift */; };
+		D7CFE8702B13167A00C1E370 /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE86F2B13167A00C1E370 /* TransactionDetailView.swift */; };
+		D7CFE8732B13199000C1E370 /* ColorPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CFE8722B13199000C1E370 /* ColorPill.swift */; };
 		D7FFAACF2B1156B7008C36B8 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FFAACE2B1156B7008C36B8 /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +80,9 @@
 		D7CFE8632B1308D900C1E370 /* OneOfEachCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneOfEachCategory.swift; sourceTree = "<group>"; };
 		D7CFE8672B1311C200C1E370 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
 		D7CFE86A2B1313DD00C1E370 /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
+		D7CFE86D2B13164900C1E370 /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
+		D7CFE86F2B13167A00C1E370 /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
+		D7CFE8722B13199000C1E370 /* ColorPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPill.swift; sourceTree = "<group>"; };
 		D7FFAACE2B1156B7008C36B8 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,10 +175,11 @@
 		D7801C3A2B1151B6006BF2E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D7CFE8712B13198500C1E370 /* Common */,
+				D7CFE86C2B13163C00C1E370 /* Transactions */,
 				D7801C112B115128006BF2E8 /* RootView.swift */,
 				D7CFE8692B1313CA00C1E370 /* Categories */,
 				D71AE0552B11C7C100A1DF5B /* ProgressBarView.swift */,
-				D71AE0572B11C93A00A1DF5B /* TransactionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +232,24 @@
 				D7CFE86A2B1313DD00C1E370 /* CategoryDetailView.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		D7CFE86C2B13163C00C1E370 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				D71AE0572B11C93A00A1DF5B /* TransactionView.swift */,
+				D7CFE86D2B13164900C1E370 /* TransactionListView.swift */,
+				D7CFE86F2B13167A00C1E370 /* TransactionDetailView.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		D7CFE8712B13198500C1E370 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D7CFE8722B13199000C1E370 /* ColorPill.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7CFE8732B13199000C1E370 /* ColorPill.swift in Sources */,
 				D7801C482B115374006BF2E8 /* CategoryViewModel.swift in Sources */,
 				D7801C122B115128006BF2E8 /* RootView.swift in Sources */,
 				D7801C102B115128006BF2E8 /* PocketBreadApp.swift in Sources */,
@@ -372,6 +398,8 @@
 				D7801C3E2B115202006BF2E8 /* Category.swift in Sources */,
 				D7801C4A2B1153AC006BF2E8 /* TransactionViewModel.swift in Sources */,
 				D7FFAACF2B1156B7008C36B8 /* CategoryView.swift in Sources */,
+				D7CFE8702B13167A00C1E370 /* TransactionDetailView.swift in Sources */,
+				D7CFE86E2B13164900C1E370 /* TransactionListView.swift in Sources */,
 				D71AE0562B11C7C100A1DF5B /* ProgressBarView.swift in Sources */,
 				D71AE05A2B11CB1500A1DF5B /* Amount.swift in Sources */,
 				D7CFE8622B1308CD00C1E370 /* BasicBudget.swift in Sources */,
