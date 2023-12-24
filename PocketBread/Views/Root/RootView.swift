@@ -21,6 +21,7 @@ struct RootView: View {
                     CategoryListView(
                         viewModel: $viewModel.categoryViewModel
                     )
+                    ActionSection()
                     TransactionListView(
                         viewModel: $viewModel.transactionViewModel
                     )
