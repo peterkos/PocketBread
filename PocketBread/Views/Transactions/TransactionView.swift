@@ -13,8 +13,6 @@ struct TransactionView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(transaction.name)
-                    .font(.body.bold())
                 Text(transaction.vendor.name)
                     .font(.body.italic())
                 Text(transaction.date.formatted())

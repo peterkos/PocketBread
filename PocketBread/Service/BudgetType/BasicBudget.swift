@@ -38,36 +38,32 @@ enum BasicBudget {
         return [
             Transaction(
                 id: .init(),
-                name: "Burger",
+                vendor: Vendor(id: .init(), name: "McRicky's"),
                 date: Date.now,
                 amount: Amount(12.00),
                 category: categoriesDict["Food"],
-                vendor: Vendor(id: .init(), name: "McRicky's"),
                 note: "Yummy!"
             ),
             Transaction(
                 id: .init(),
-                name: "Pizza",
+                vendor: Vendor(id: .init(), name: "Ricky's Pizza"),
                 date: Date.now,
                 amount: Amount(24.00),
-                category: categoriesDict["Food"],
-                vendor: Vendor(id: .init(), name: "Ricky's Pizza")
+                category: categoriesDict["Food"]
             ),
             Transaction(
                 id: .init(),
-                name: "Lord of the Rings",
+                vendor: Vendor(id: .init(), name: "Films with Ricky"),
                 date: Date.now,
                 amount: Amount(6.00),
-                category: categoriesDict["Entertainment"],
-                vendor: Vendor(id: .init(), name: "Films with Ricky")
+                category: categoriesDict["Entertainment"]
             ),
             Transaction(
                 id: .init(),
-                name: "Rent",
+                vendor: Vendor(id: .init(), name: "Ricky's Apartments"),
                 date: Date.now,
                 amount: Amount(2000.00),
                 category: categoriesDict["Rent"],
-                vendor: Vendor(id: .init(), name: "Ricky's Apartments"),
                 note: "Utilities separate"
             ),
         ]
