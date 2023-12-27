@@ -37,11 +37,10 @@ enum OneOfEachCategory {
         return [
             Transaction(
                 id: .init(),
-                name: "Burger",
+                vendor: Vendor(id: .init(), name: "McRicky's"),
                 date: Date.now,
                 amount: Amount(12.00),
                 category: categories[1],
-                vendor: Vendor(id: .init(), name: "McRicky's"),
                 note: "Yummy!"
             ),
         ]

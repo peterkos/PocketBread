@@ -12,7 +12,6 @@ struct TransactionDetailView: View {
 
     var body: some View {
         List {
-            detailRow(label: "Name", value: transaction.name)
             detailRow(
                 label: "Date",
                 value: transaction.date.formatted(date: .abbreviated, time: .omitted)
@@ -35,11 +34,11 @@ struct TransactionDetailView: View {
                 )
             }
 
-            detailRow(label: "Vendor", value: transaction.vendor.name)
+            
             detailRow(label: "Note", value: transaction.note ?? "")
             detailRow(label: "id", value: transaction.id.description)
         }
-        .navigationTitle(transaction.name)
+        .navigationTitle(transaction.vendor.name)
         .navigationBarTitleDisplayMode(.large)
     }
 

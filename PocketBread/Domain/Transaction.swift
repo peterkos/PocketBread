@@ -9,10 +9,9 @@ import Foundation
 
 struct Transaction: Identifiable {
     var id: UUID
-    var name: String
+    var vendor: Vendor
     var date: Date
     var amount: Amount
     var category: Category?
-    var vendor: Vendor
     var note: String?
 }
